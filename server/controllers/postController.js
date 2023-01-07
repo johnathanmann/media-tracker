@@ -24,7 +24,8 @@ async function getPostById(req, res) {
 async function createPost(req, res) {
   try {
     const newPost = await Post.create(req.body);
-    let postType = JSON.stringify(newPost.type);
+    let postType = req.body.type;
+    console.log(postType)
     const associatedUser = await User.findOneAndUpdate(
       { _id: req.body.user },
       { $addToSet: { posts: newPost._id, [postType]: newPost._id } },
