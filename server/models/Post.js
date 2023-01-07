@@ -14,10 +14,17 @@ const postSchema = new Schema ({
         type: String,
         required: true,
     },
+    rating:{
+        type: Number,
+        min: 0,
+        max: 10,
+        required: true,
+    }
+    ,
     createdAt: {
         type: Date,
         default: Date.now,
-    },
+    }
 });
 
 const Post = model("Post", postSchema);
