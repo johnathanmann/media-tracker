@@ -108,13 +108,14 @@ div.click-to-top {
     z-index:10;
     }
     
-    div.click-to-top img{
+    /* div.click-to-top img{
     -webkit-transition: all 0.8s;
     moz-transition: all 0.8s;
     transition: all 0.8s;
-    }
+    } */
 
-    div.click-to-top span {display: none; 
+    div.click-to-top span {
+        display: none; 
         position: absolute; 
         right: -50px;
         top: 150px;
@@ -124,4 +125,30 @@ div.click-to-top {
         height: auto;
     }
 
-    div.click-to-top:hover span {display: block; }
+div.click-to-top:hover span {
+    display: block; 
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.tooltip {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+  
+.click-to-top:hover > .tooltip {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.btn {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    color: #FFF;
+  }
+  
+.uploader:hover > .btn {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+    
+}

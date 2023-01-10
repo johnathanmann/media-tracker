@@ -16,9 +16,11 @@ export default function Homepage({handlePageChange }){
           <div className="col-md-7 text-center">
           <div class="click-to-top">
           <img className="icon floating" id="albumIcon" src={album} alt="Red vinyl record icon"/>
+          <div className="tooltip">
           <span className="icon floating" id="albumIcon">Save your favorite albums of the year!</span>
           </div>
-          <div class="click-to-top">
+          </div>
+          <div className="click-to-top">
           <img className="icon floating" id="bookIcon" src={book} alt="Green book icon"/>
           <span className="icon floating" id="bookIcon">Log all of your new reads</span>
           </div><br/>
@@ -28,7 +30,7 @@ export default function Homepage({handlePageChange }){
           </div>
           <div class="click-to-top">
           <img className="icon floating" id="tvIcon" src={tv} alt="Purple television icon"/>
-          <span className="icon floating" id="tvIcon">Keep track of all of this years top tv shows</span>
+          <span className="icon floating" id="tvIcon">Keep track of all of this years top tv series</span>
           </div>
           </div>
           </div>
