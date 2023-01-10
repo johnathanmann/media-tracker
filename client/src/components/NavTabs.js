@@ -49,6 +49,10 @@ function NavTabs({ currentPage, handlePageChange }) {
                   <button className="link no-border" onClick={() => handlePageChange('Albums')}>
                   Other
                 </button></Nav.Item></li>
+                <li><Nav.Item>
+                  <button className="link" id="newPost" onClick={() => handlePageChange('NewPost')}>
+                  New Post +
+                </button></Nav.Item></li>
                 </ul>
               </Nav>
             </Navbar.Collapse>

@@ -22,10 +22,11 @@
     --blue: #427d9e;
     --lavender: #63629f;
     --purple: #51508a;
+    --black: #1e1e1e;
 }
 
 html{
-    background-color: rgb(30, 30, 30);
+    background-color: #1e1e1e;
     overflow-x: hidden;
 }
 

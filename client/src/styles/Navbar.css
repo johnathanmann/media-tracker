@@ -18,9 +18,16 @@ li{
     border: none;
 }
 
+#newPost{
+    background-color: #FFF;
+    color: var(--black);
+    font-weight: bold;
+}
+
 @media (max-width: 991px) {
-    li{
-        display:block;
+    li, .link{
+        display:inline-block;
+        border: none;
     }
 
     ul{
