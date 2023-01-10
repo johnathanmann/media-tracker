@@ -14,7 +14,7 @@ function NavTabs({ currentPage, handlePageChange }) {
               <Nav className="ms-auto d-block">
                 <ul>
                 <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('All')}>
+                  <button className="link" onClick={() => handlePageChange('Posts')}>
                   All
                 </button></Nav.Item></li>
                   <li><Nav.Item>
@@ -51,7 +51,7 @@ function NavTabs({ currentPage, handlePageChange }) {
                 </button></Nav.Item></li>
                 <li><Nav.Item>
                   <button className="link" id="newPost" onClick={() => handlePageChange('NewPost')}>
-                  New Post +
+                  New Post + 
                 </button></Nav.Item></li>
                 </ul>
               </Nav>

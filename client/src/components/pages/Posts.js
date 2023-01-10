@@ -35,8 +35,12 @@ export default function Dashboard() {
     getPosts();
   }, []);
 
+  function refreshPage(){
+    window.location.reload();
+} 
+
   return (
-    <div>
+    <div className="posts-container">
     <div id="posts">
       <h3>{singleUser.username}'s posts</h3>
       <SinglePost allPosts={allPosts} userId={userId}/>
