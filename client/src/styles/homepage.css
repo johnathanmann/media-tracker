@@ -1,0 +1,96 @@
+#homepage, .navbar{
+    background-color: rgb(30, 30, 30);
+    color: #FFF;
+}
+
+h1{
+    font-family: Collvetica;
+}
+
+#homepage{
+    padding: 50px;
+}
+
+.icon{
+    height: 200px;
+    width: 200px;
+    margin: 35px 45px;
+}
+
+.rainbow-text1 {
+    background-image: linear-gradient(to bottom, var(--red), var(--red), var(--yellow),var(--yellow));   
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.rainbow-text2 {
+    background-image: linear-gradient(to bottom, var(--green),var(--green), var(--teal), var(--teal));   
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.rainbow-text3 {
+    background-image: linear-gradient(to bottom, var(--blue),var(--blue), var(--purple), var(--purple));   
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#albumIcon { 
+    animation-name: albumIcon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes albumIcon {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+#bookIcon { 
+    animation-name: bookIcon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes bookIcon {
+    0% { transform: translate(0px,  -5px); }
+    50%  { transform: translate(10px, -15px); }
+    100%   { transform: translate(0, -5px); }   
+}
+
+#movieIcon { 
+    animation-name: movieIcon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes movieIcon {
+    0% { transform: translate(-5px,  0px); }
+    50%  { transform: translate(-15px, 10px); }
+    100%   { transform: translate(-5px, 0px); }   
+}
+
+#tvIcon { 
+    animation-name: tvIcon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes tvIcon {
+    0% { transform: translate(0,  5px); }
+    50%  { transform: translate(15px, 0px); }
+    100%   { transform: translate(0, 5px); }   
+}

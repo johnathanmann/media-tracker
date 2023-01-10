@@ -19,8 +19,7 @@ const postSchema = new Schema ({
         min: 0,
         max: 10,
         required: true,
-    }
-    ,
+    },
     createdAt: {
         type: Date,
         default: Date.now,

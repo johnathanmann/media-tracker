@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Collvetica;
+  src: url(../assets/fonts/coolvetica\ rg.otf)
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../assets/fonts/Ubuntu-Medium.ttf)
+}
+
+@font-face {
+    font-family: UbuntuLight;
+    src: url(../assets/fonts/Ubuntu-LightItalic.ttf)
+}
+
+:root{
+    --red: #e5524e;
+    --orange: #ea8a58;
+    --yellow: #eaab3f;
+    --green: #8ab560;
+    --teal: #519f82;
+    --blue: #427d9e;
+    --lavender: #63629f;
+    --purple: #51508a;
+}
+
+html{
+    background-color: rgb(30, 30, 30);
+    overflow-x: hidden;
+}
+
+body{
+margin: 0;
+}
+
