@@ -13,6 +13,10 @@ function NavTabs({ currentPage, handlePageChange }) {
             <Navbar.Collapse>
               <Nav className="ms-auto d-block">
                 <ul>
+                <li><Nav.Item>
+                  <button className="link" onClick={() => handlePageChange('All')}>
+                  All
+                </button></Nav.Item></li>
                   <li><Nav.Item>
                   <button className="link" onClick={() => handlePageChange('Albums')}>
                   Albums
@@ -41,9 +45,9 @@ function NavTabs({ currentPage, handlePageChange }) {
                   <button className="link" onClick={() => handlePageChange('Shows')}>
                  Shows
                 </button></Nav.Item></li>
-                  <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Video Games')}>
-                 Login / Sign-up
+                <li><Nav.Item>
+                  <button className="link no-border" onClick={() => handlePageChange('Albums')}>
+                  Other
                 </button></Nav.Item></li>
                 </ul>
               </Nav>
@@ -58,7 +62,7 @@ function NavTabs({ currentPage, handlePageChange }) {
               <ul>
                 <li>
                 <Nav.Item>
-                <button className="link" onClick={() => handlePageChange('Login')}>
+                <button className="link no-border" onClick={() => handlePageChange('Login')}>
                  Login / Sign-up
                 </button>
               </Nav.Item>

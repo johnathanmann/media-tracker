@@ -102,43 +102,33 @@ h1{
 div.click-to-top {
     display:inline-block;
     position:relative;
-    }
+}
     
-    div.click-to-top:hover{
+div.click-to-top:hover{
     z-index:10;
-    }
+}
     
-    /* div.click-to-top img{
-    -webkit-transition: all 0.8s;
-    moz-transition: all 0.8s;
-    transition: all 0.8s;
-    } */
-
-    div.click-to-top span {
-        display: none; 
-        position: absolute; 
-        right: -50px;
-        top: 150px;
-        background: rgb(255, 255, 255); 
-        color: inherit; 
-        border-radius: 10px;
-        height: auto;
-    }
+div.click-to-top span {
+    display: none; 
+    position: absolute; 
+    top: 150px;
+    background: rgb(255, 255, 255); 
+    color: inherit; 
+    border-radius: 10px;
+    height: auto;
+    padding: 5px;
+    width: max-content;
+}
 
 div.click-to-top:hover span {
     display: block; 
-    -webkit-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }
 
-.tooltip {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-  
 .click-to-top:hover > .tooltip {
     opacity: 1;
-    transition: opacity 1s ease-in;
+    transition: opacity .5s ease-in;
 }
 
 .btn {
