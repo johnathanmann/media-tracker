@@ -143,9 +143,18 @@ div.click-to-top:hover span {
     
 }
 
+@media (min-width: 1532px) {
+    .break br{
+        display: block;
+    }
+}
+
 @media (max-width: 1024px) {
     .icon{
         margin:  25px;
+    }
+    .break{
+        display: none;
     }
 }
 
