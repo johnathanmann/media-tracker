@@ -11,7 +11,7 @@ export default function Dashboard() {
   async function getPosts() {
     const response = await fetch(`/api/users/posts/${userId}`);
     const allPosts = await response.json();
-
+console.log(allPosts)
     setAllPosts(allPosts.allPosts);
   };
 

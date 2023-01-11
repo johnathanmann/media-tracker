@@ -24,54 +24,6 @@ const userSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: "Post",
     },
-  ],
-  albums: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  anime: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  books: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  comics: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  manga: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  movies: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  tv: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
-  ],
-  games: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post",
-    },
   ]
 });
 

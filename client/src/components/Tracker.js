@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Planner from "./pages/PostCreate";
 import Posts from "./pages/Posts";
+import Albums from "./pages/Albums";
 import "../styles/styles.css"
 
 export default function Tracker() {
@@ -21,6 +22,9 @@ export default function Tracker() {
     }
     if (currentPage === "Posts") {
       return <Posts />;
+    }
+    if (currentPage === "Albums") {
+      return <Albums />;
     }
   };
 

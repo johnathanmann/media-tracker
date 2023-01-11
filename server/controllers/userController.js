@@ -28,7 +28,7 @@ async function getUserById(req, res) {
   }
 }
 
-async function getUserPosts(req, res) {
+async function getUserPosts( req, res) {
   try {
     var allPosts = await User.findById(req.params.userId).populate("posts");
     allPosts = allPosts.posts;

@@ -14,6 +14,10 @@ const postSchema = new Schema ({
         type: String,
         required: true,
     },
+    type :{
+        type: String,
+        required: true,
+    },
     rating:{
         type: Number,
         min: 0,
