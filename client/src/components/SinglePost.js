@@ -9,7 +9,7 @@ export default function SinglePost({
 
 return(
   allPosts.map((post) => (
-    <div key={post._id} className={post.type}>
+    <div key={post._id} className={`post ${ post.type }`}>
       <Post thisPost={post}/>
       </div>
   ))

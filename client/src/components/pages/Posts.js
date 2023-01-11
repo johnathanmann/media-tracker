@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import SinglePost from "../SinglePost";
 import Auth from "../../utils/auth";
+import "../../styles/posts.css";
 
 export default function Dashboard() {
   const [allPosts, setAllPosts] = useState([]);
@@ -40,7 +41,7 @@ console.log(allPosts)
 } 
 
   return (
-    <div className="posts-container">
+    <div id="posts-container">
     <div id="posts">
       <h3>{singleUser.username}'s posts</h3>
       <SinglePost allPosts={allPosts} userId={userId}/>

@@ -1,0 +1,34 @@
+#posts-container{
+    background-color: var(--black);
+    color: #FFF;
+}
+
+.post{
+    margin: 20px;
+    padding: 5px;
+}
+
+.post {
+    color: black;
+    border: 2px solid #FFF;
+}
+
+.time{
+    font-family: UbuntuLight;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.albums{
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    color: var(--red);
+}
+
+.albums h6{
+    color: #FFF;
+}
+
+.delete{
+    color: inherit;
+    font-family: UbuntuItalic;
+}

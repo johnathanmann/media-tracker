@@ -13,6 +13,11 @@
     src: url(../assets/fonts/Ubuntu-LightItalic.ttf)
 }
 
+@font-face {
+    font-family: UbuntuItalic;
+    src: url(../assets/fonts/Ubuntu-Italic.ttf)
+}
+
 :root{
     --red: #e5524e;
     --orange: #ea8a58;
@@ -22,11 +27,11 @@
     --blue: #427d9e;
     --lavender: #63629f;
     --purple: #51508a;
-    --black: #1e1e1e;
+    --black: #2d2d2d;
 }
 
 html{
-    background-color: #1e1e1e;
+    background-color: var(--black);
     overflow-x: hidden;
 }
 

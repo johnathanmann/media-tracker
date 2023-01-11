@@ -22,13 +22,12 @@ async function deletePost(post_Id) {
 export default function Post({thisPost}) {
   const postId = thisPost._id;
 return (
-      <div key={thisPost._id} className="post">
+      <div key={thisPost._id}>
       <h2>{thisPost.title}</h2>
-      <p>{thisPost.createdaAt}</p>
-      <code>{thisPost.description}</code> <br />
-      <button onClick={() => deletePost(postId)} >
-      <span id="postId">Delete</span>
-      </button>
+      <p className="time">{thisPost.createdAt}</p>
+      <p className="time">Minutes Spent: {thisPost.time}</p>
+      <h6>{thisPost.description}</h6>
+      <button className="delete" onClick={() => deletePost(postId)} >- Delete</button>
       </div>
 )
 }
