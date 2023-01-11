@@ -42,8 +42,8 @@ console.log(allPosts)
 
   return (
     <div id="posts-container">
-    <div id="posts">
-      <h3>{singleUser.username}'s posts</h3>
+    <div>
+      <h1 className="header">{singleUser.username}'s posts</h1>
       <SinglePost allPosts={allPosts} userId={userId}/>
     </div>
     </div>
