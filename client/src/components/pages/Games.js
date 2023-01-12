@@ -12,7 +12,7 @@ export default function Dashboard() {
     const response = await fetch(`/api/users/posts/${userId}`);
     const allPosts = await response.json();
     var wantedData = allPosts.allPosts.filter(function(i) {
-      return i.type === "anime";
+      return i.type === "games";
     });
     console.log(wantedData)
     setAllPosts(wantedData);
@@ -41,7 +41,7 @@ export default function Dashboard() {
   return (
     <div className="category">
     <div >
-      <h1 className="header">{singleUser.username}'s anime</h1>
+      <h1 className="header">{singleUser.username}'s video games</h1>
       <CategoryPost allPosts={allPosts} userId={userId}/>
     </div>
     </div>

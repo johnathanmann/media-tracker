@@ -73,6 +73,12 @@ h6{
     color: var(--purple);
 }
 
+.other{
+    border: 2px solid var(--pink);
+    border-radius: 5px;
+    color: var(--pink);
+}
+
 .header{
     color: #FFF;
 }

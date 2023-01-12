@@ -29,31 +29,31 @@ function NavTabs({ currentPage, handlePageChange }) {
                   Albums
                 </button></Nav.Item></li>
                   <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Anime')}>
+                  <button className="link" onClick={() => pageChange('Animes', '#ea8a58')}>
                   Anime
                 </button></Nav.Item></li>
                   <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Books')}>
+                  <button className="link" onClick={() => pageChange('Books', '#eaab3f')}>
                   Books
                 </button></Nav.Item></li>
                   <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Comics')}>
-                  Comics
+                  <button className="link" onClick={() => pageChange('Comics', '#8ab560')}>
+                  Comics/Manga
                 </button></Nav.Item></li>
                   <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Manga')}>
-                  Manga
-                </button></Nav.Item></li>
-                  <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Movies')}>
+                  <button className="link" onClick={() => pageChange('Movies', '#427d9e')}>
                   Movies
                 </button></Nav.Item></li>
                   <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Shows')}>
+                  <button className="link" onClick={() => pageChange('Shows', '#89629f')}>
                  Shows
                 </button></Nav.Item></li>
                 <li><Nav.Item>
-                  <button className="link no-border" onClick={() => handlePageChange('Albums')}>
+                  <button className="link" onClick={() => pageChange('Games', '#b639ae')}>
+                  Games
+                </button></Nav.Item></li>
+                <li><Nav.Item>
+                  <button className="link no-border" onClick={() => pageChange('Other', '#da4c88')}>
                   Other
                 </button></Nav.Item></li>
                 <li><Nav.Item>

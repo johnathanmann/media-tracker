@@ -5,6 +5,13 @@ import Login from "./pages/Login";
 import Planner from "./pages/PostCreate";
 import Posts from "./pages/Posts";
 import Albums from "./pages/Albums";
+import Animes from "./pages/Animes";
+import Books from "./pages/Books";
+import Comics from "./pages/Comics";
+import Games from "./pages/Games";
+import Movies from "./pages/Movies";
+import Shows from "./pages/Shows";
+import Other from "./pages/Other";
 import "../styles/styles.css"
 
 export default function Tracker() {
@@ -25,6 +32,27 @@ export default function Tracker() {
     }
     if (currentPage === "Albums") {
       return <Albums />;
+    }
+    if (currentPage === "Animes") {
+      return <Animes />;
+    }
+    if (currentPage === "Books") {
+      return <Books />;
+    }
+    if (currentPage === "Comics") {
+      return <Comics />;
+    }
+    if (currentPage === "Games") {
+      return <Games />;
+    }
+    if (currentPage === "Movies") {
+      return <Movies />;
+    }
+    if (currentPage === "Shows") {
+      return <Shows />;
+    }
+    if (currentPage === "Other") {
+      return <Other />;
     }
   };
 
