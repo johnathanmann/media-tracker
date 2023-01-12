@@ -12,7 +12,7 @@ export default function Tracker() {
 
   const renderPage = () => {
     if (currentPage === "Homepage") {
-      return <Homepage handlePageChange={handlePageChange} />;
+      return  <Homepage handlePageChange={handlePageChange} />;
     }
     if (currentPage === "Login") {
       return <Login />;
@@ -35,7 +35,7 @@ export default function Tracker() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div id="body">
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange}/>
       {renderPage()}
     </div>

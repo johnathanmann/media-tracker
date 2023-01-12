@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import SinglePost from "../SinglePost";
+import CategoryPost from "../CategoryPost";
 import Auth from "../../utils/auth";
 
 export default function Dashboard() {
@@ -38,15 +38,11 @@ export default function Dashboard() {
     getPosts();
   }, []);
 
-  function refreshPage(){
-    window.location.reload();
-} 
-
   return (
-    <div className="posts-container">
-    <div id="posts">
-      <h3>{singleUser.username}'s posts</h3>
-      <SinglePost allPosts={allPosts} userId={userId}/>
+    <div className="category">
+    <div >
+      <h1 className="header">{singleUser.username}'s albums</h1>
+      <CategoryPost allPosts={allPosts} userId={userId}/>
     </div>
     </div>
   );

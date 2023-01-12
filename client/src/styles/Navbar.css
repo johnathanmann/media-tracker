@@ -19,8 +19,8 @@ li{
 }
 
 #newPost{
-    background-color: #FFF;
-    color: var(--black);
+    border: 2px solid #FFF;
+    color: #FFF;
     font-weight: bold;
 }
 

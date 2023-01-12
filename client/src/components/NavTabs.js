@@ -4,21 +4,28 @@ import { Nav, Navbar} from 'react-bootstrap';
 import Auth from '../utils/auth';
 
 function NavTabs({ currentPage, handlePageChange }) {
+  window.addEventListener("load", (event) => {
+    document.body.style.background = '#2d2d2d';
+  });
+  function pageChange(page, color) {
+    handlePageChange(page);
+    document.body.style.background = color;
+ }
   return (
     <div>
         {Auth.loggedIn() ? (
               <Navbar className="navbar navbar-expand-lg navbar-dark" collapseOnSelect  expand="lg">
-              <a onClick={() => handlePageChange('Homepage')}><h1>Media Spot</h1></a>
+              <a onClick={() => pageChange('Homepage', '#2d2d2d')}><h1>Media Spot</h1></a>
             <Navbar.Toggle />
             <Navbar.Collapse>
               <Nav className="ms-auto d-block">
                 <ul>
                 <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Posts')}>
+                  <button className="link" onClick={() => pageChange('Posts', '#2d2d2d')}>
                   All
                 </button></Nav.Item></li>
                   <li><Nav.Item>
-                  <button className="link" onClick={() => handlePageChange('Albums')}>
+                  <button className="link" onClick={() => pageChange('Albums', '#e3324e')}>
                   Albums
                 </button></Nav.Item></li>
                   <li><Nav.Item>

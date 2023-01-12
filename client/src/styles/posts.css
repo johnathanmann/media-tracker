@@ -1,13 +1,10 @@
 #posts-container{
-    background-color: var(--black);
     color: #FFF;
 }
 
 .post{
     margin: 20px;
     padding: 5px;
-    color: black;
-    border: 2px solid #FFF;
 }
 
 .time{
@@ -20,7 +17,7 @@
     font-family: UbuntuItalic;
 }
 
-h1{
+.header {
     margin: 20px;
 }
 
@@ -74,4 +71,16 @@ h6{
     border: 2px solid var(--purple);
     border-radius: 5px;
     color: var(--purple);
+}
+
+.header{
+    color: #FFF;
+}
+
+.categoryPost{
+    margin: 20px;
+    padding: 5px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    color: #FFF;
 }

@@ -1,5 +1,4 @@
 #homepage, .navbar{
-    background-color: var(--black);
     color: #FFF;
 }
 
@@ -186,6 +185,14 @@ div.click-to-top:hover span {
     .icon{
         height: 100px;
         width: 100px;
+    }
+
+    #homepage{
+        padding: 25px;
+    }
+
+    #homepage h1{
+        margin: 0;
     }
 
     #albumIcon, #bookIcon, #movieIcon, #tvIcon{

@@ -30,12 +30,4 @@
     --black: #2d2d2d;
 }
 
-html{
-    background-color: var(--black);
-    overflow-x: hidden;
-}
-
-body{
-margin: 0;
-}
 
