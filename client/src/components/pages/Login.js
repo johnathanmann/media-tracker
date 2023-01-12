@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import auth from "../../utils/auth";
+import "../../styles/login.css"
 import { signupAction } from "../../utils/signup";
 import { loginAction } from "../../utils/login";
 
@@ -52,7 +53,9 @@ export default function Login() {
   };
 
   return (
-    <div id="login">
+    <div className="login-container" id="login">
+      <div id="border">
+      <div className="registration">
         <h3>Login</h3>
         <form onSubmit={handleLogin}>
           <div className="form-group">
@@ -81,7 +84,10 @@ export default function Login() {
               Login
             </button>
         </form>
+      </div>
+      <div className="registration">
       <h3>Signup</h3>
+
         <form onSubmit={handleSignup} className="form signup-form">
           <div className="form-group">
             <label htmlFor="name-signup">Name:</label>
@@ -125,6 +131,8 @@ export default function Login() {
             </button>
           </div>
         </form>
+      </div>
+    </div>
     </div>
   );
 }

@@ -1,50 +1,41 @@
 .login-container{
-    height: 100vh;
-    margin: 0;
+    margin: 50px;
     display: flex;  
     justify-content: center;  
     align-items: center;  
-    font-family: roboto;
-    background-color: var(--green);
+    color: #FFF;
+    font-family: Ubuntu;
+}
+
+#border{
+    width: 70vw;
+    background-image: linear-gradient(to bottom, var(--red), var(--orange), var(--yellow),var(--green),var(--teal),var(--blue),var(--lavender),var(--purple),var(--pink));
+    border-radius: 5px;
 }
 
 .registration{
-    margin: 0px 100px;
-}
-
-#login h2{
-    font-family: robotoitalic;
+    margin: 0px 50px;
 }
 
 #login input{
     all: unset;
-    background-color: none;
-    border-bottom: 3px solid #000;
+    background-color: #FFF;
+    border-radius: 5px;
     width: 100%;
-    margin: 5px 0px;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px var(--green) inset !important;
-}
-
-#login label{
-    margin: 15px 0px;
-    font-family: symtext;
-}
 
 #login h3{
-    font-family: metalgear;
+    font-family: Collvetica;
+    margin: 10px 0px;
 }
 
 #login button{
     all: unset;
-    font-family: symtext;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-weight: bold;
     padding: 5px;
-    border: 3px solid black;
     margin: 10px 0px;
 } 
 
