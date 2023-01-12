@@ -12,6 +12,8 @@ import Games from "./pages/Games";
 import Movies from "./pages/Movies";
 import Shows from "./pages/Shows";
 import Other from "./pages/Other";
+import Stats from "./pages/Stats";
+import PostCreate from "./pages/PostCreate";
 import "../styles/styles.css"
 
 export default function Tracker() {
@@ -53,6 +55,12 @@ export default function Tracker() {
     }
     if (currentPage === "Other") {
       return <Other />;
+    }
+    if (currentPage === "Stats") {
+      return <Stats />;
+    }
+    if (currentPage === "PostCreate") {
+      return <PostCreate />;
     }
   };
 

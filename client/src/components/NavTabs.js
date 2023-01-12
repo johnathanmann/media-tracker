@@ -5,7 +5,7 @@ import Auth from '../utils/auth';
 
 function NavTabs({ currentPage, handlePageChange }) {
   window.addEventListener("load", (event) => {
-    document.body.style.background = '#2d2d2d';
+    document.body.style.background = '#1f1f1f';
   });
   function pageChange(page, color) {
     handlePageChange(page);
@@ -15,7 +15,7 @@ function NavTabs({ currentPage, handlePageChange }) {
     <div>
         {Auth.loggedIn() ? (
               <Navbar className="navbar navbar-expand-lg navbar-dark" collapseOnSelect  expand="lg">
-              <a onClick={() => pageChange('Homepage', '#2d2d2d')}><h1>Media Spot</h1></a>
+              <a onClick={() => pageChange('Homepage', '#1f1f1f')}><h1>Media Spot</h1></a>
             <Navbar.Toggle />
             <Navbar.Collapse>
               <Nav className="ms-auto d-block">
@@ -57,7 +57,7 @@ function NavTabs({ currentPage, handlePageChange }) {
                   Other
                 </button></Nav.Item></li>
                 <li><Nav.Item>
-                  <button className="link" id="newPost" onClick={() => handlePageChange('NewPost')}>
+                  <button className="link" id="newPost" onClick={() => pageChange('PostCreate', '#1f1f1f')}>
                   New Post + 
                 </button></Nav.Item></li>
                 </ul>

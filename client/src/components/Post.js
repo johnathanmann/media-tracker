@@ -23,7 +23,7 @@ export default function Post({thisPost}) {
   const postId = thisPost._id;
 return (
       <div key={thisPost._id}>
-      <h2>{thisPost.title}</h2>
+      <h2>{thisPost.title}  <span className="rating">{thisPost.rating}/10</span></h2>
       <p className="time">{thisPost.createdAt}</p>
       <p className="time">Minutes Spent: {thisPost.time}</p>
       <h6>{thisPost.description}</h6>

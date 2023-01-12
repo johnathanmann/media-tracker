@@ -1,0 +1,73 @@
+#post-create{
+    color: #FFF;
+    width: 90vw;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #FFF;
+}
+
+#post-create p{
+    margin: 0px;
+}
+
+#post-create label, #post-create h3{
+    font-family: Collvetica;
+}
+
+#post-create label{
+    margin: 10px 0px;
+}
+
+.header button{
+    all: unset;
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#post-create textarea{
+    all: unset;
+    background-color: white;
+    border: 3px solid #FFF;
+    width: 90%;
+    font-family: Ubuntu;
+    color: #000;
+}
+
+select, option, input {
+    color: #000;
+    background-color: #fff;
+    padding: 2px;
+}
+.hidden{
+    display: none;
+}
+
+#postRating, #postTime{
+    margin: 5px;
+    width: 50px;
+}
+
+#postSubmit{
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
+    padding: 5px;
+}
+
+@media (max-width: 756px){
+    #post-create p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 550px){
+    #post-create .border{
+        margin-top: 100px;
+    }
+    #post-create p{
+        font-size: 8px;
+    }
+}
