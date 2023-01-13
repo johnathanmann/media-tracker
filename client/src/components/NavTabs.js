@@ -15,7 +15,7 @@ function NavTabs({ currentPage, handlePageChange }) {
     <div>
         {Auth.loggedIn() ? (
               <Navbar className="navbar navbar-expand-lg navbar-dark" collapseOnSelect  expand="lg">
-              <a onClick={() => pageChange('Homepage', '#2d2d2d')}><h1>Media Spot</h1></a>
+              <a onClick={() => pageChange('Homepage', '#2d2d2d')}><h1>Media Query</h1></a>
             <Navbar.Toggle />
             <Navbar.Collapse>
               <Nav className="ms-auto d-block">
@@ -61,7 +61,7 @@ function NavTabs({ currentPage, handlePageChange }) {
                   Stats
                 </button></Nav.Item></li>
                 <li><Nav.Item>
-                  <button className="link" id="newPost" onClick={() => handlePageChange('NewPost')}>
+                  <button className="link" id="newPost" onClick={() => pageChange('PostCreate', '#2d2d2d')}>
                   New Post + 
                 </button></Nav.Item></li>
                 </ul>
@@ -70,7 +70,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           </Navbar>
           ) : (
             <Navbar className="navbar navbar-expand-lg navbar-dark" collapseOnSelect  expand="lg">
-            <a className="navbar-brand" onClick={() => handlePageChange('Homepage')}><h1>Media Spot</h1></a>
+            <a className="navbar-brand" onClick={() => handlePageChange('Homepage')}><h1>Media Query</h1></a>
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav className="ms-auto d-block">

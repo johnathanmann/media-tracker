@@ -54,7 +54,7 @@ async function updateUser(req, res) {
   try {
     const updatedUser = await User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $set: req.body },
+      { $inc: { userTime: req.body.userTime } },
       { new: true }
     )
       .select("-__v")

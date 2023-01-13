@@ -154,8 +154,6 @@ export default function Dashboard() {
     <div id="posts-container">
     <div>
     <CanvasJSChart options = {options} style={styles.canvas}/>
-      <h1 className="header">{singleUser.username} has {allAlbums.length}</h1>
-      <h1 className="header">{singleUser.username} has {allAnimes.length}</h1>
     </div>
     </div>
   );
