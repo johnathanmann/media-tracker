@@ -16,6 +16,7 @@ const styles = {
 }
 
 export default function Dashboard() {
+  const [allPosts, setAllPosts] = useState([]);
   const [allAlbums, setAllAlbums] = useState([]);
   const [allAnimes, setAllAnimes] = useState([]);
   const [allBooks, setAllBooks] = useState([]);
@@ -40,6 +41,11 @@ export default function Dashboard() {
 
     setSingleUser(singleUser)
   }
+  async function getPosts() {
+    const response = await fetch(`/api/users/posts/${userId}`);
+    const allPosts = await response.json();
+    setAllPosts(allPosts.allPosts);
+  };
   async function getAlbums() {
     const response = await fetch(`/api/users/posts/${userId}`);
     const allPosts = await response.json();
@@ -106,6 +112,7 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
+    getPosts();
     getUser();
     getAlbums();
     getAnimes();
@@ -115,7 +122,7 @@ export default function Dashboard() {
     getMovies();
     getOther();
     getShows();
-  },[userID]);
+  });
 
 		const options = {
 			animationEnabled: true,
@@ -131,14 +138,14 @@ export default function Dashboard() {
 				indexLabelFontSize: 16,
 				indexLabel: "{label} - {y}%",
 				dataPoints: [
-					{ y: `${((allAlbums.length / singleUser.posts.length) * 100)}`, color: "#e5524e", label: "Albums" },
-					{ y: `${((allAnimes.length / singleUser.posts.length) * 100)}`, color: "#ea8a58", label: "Anime" },
-          { y: `${((allBooks.length / singleUser.posts.length) * 100)}`, color: "#eaab3f", label: "Books" },
-          { y: `${((allComics.length / singleUser.posts.length) * 100)}`, color: "#8ab560", label: "Comics/Manga" },
-          { y: `${((allMovies.length / singleUser.posts.length) * 100)}`, color: "#519f82", label: "Movies" },
-          { y: `${((allShows.length / singleUser.posts.length) * 100)}`, color: "#427d9e", label: "Shows" },
-          { y: `${((allGames.length / singleUser.posts.length) * 100)}`, color: "#b639ae", label: "Games" },
-          { y: `${((allOther.length / singleUser.posts.length) * 100)}`, color: "#da4c88", label: "Other" },
+					{ y: `${((allAlbums.length / allPosts.length) * 100)}`, color: "#e5524e", label: "Albums" },
+					{ y: `${((allAnimes.length / allPosts.length) * 100)}`, color: "#ea8a58", label: "Anime" },
+          { y: `${((allBooks.length / allPosts.length) * 100)}`, color: "#eaab3f", label: "Books" },
+          { y: `${((allComics.length / allPosts.length) * 100)}`, color: "#8ab560", label: "Comics/Manga" },
+          { y: `${((allMovies.length / allPosts.length) * 100)}`, color: "#519f82", label: "Movies" },
+          { y: `${((allShows.length / allPosts.length) * 100)}`, color: "#427d9e", label: "Shows" },
+          { y: `${((allGames.length / allPosts.length) * 100)}`, color: "#b639ae", label: "Games" },
+          { y: `${((allOther.length / allPosts.length) * 100)}`, color: "#da4c88", label: "Other" },
 				]
 			}]
 	}
