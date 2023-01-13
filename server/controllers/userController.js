@@ -113,7 +113,7 @@ module.exports = {
   getAllUsers,
   getUserById,
   createUser,
-  updateUserStats,
+  updateUser,
   deleteUser,
   loginUser,
   getUserPosts

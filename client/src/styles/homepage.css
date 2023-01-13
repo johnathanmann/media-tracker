@@ -2,12 +2,18 @@
     color: #FFF;
 }
 
-h1{
+#homepage h1{
     font-family: Collvetica;
+    font-size: 100px;
 }
 
 #homepage{
     padding: 50px;
+}
+
+
+#icons1, #icons2{
+    display: inline-flex;
 }
 
 .icon{
@@ -148,12 +154,9 @@ div.click-to-top:hover span {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .icon{
         margin:  25px;
-    }
-    .break{
-        display: none;
     }
 }
 
@@ -179,6 +182,11 @@ div.click-to-top:hover span {
     #albumIcon, #bookIcon, #movieIcon, #tvIcon{
         margin: 10px;
     }
+    #homepage h1{
+        font-family: Collvetica;
+        font-size: 75px;
+    }
+    
 }
 
 @media (max-width: 460px) {
