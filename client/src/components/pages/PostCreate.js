@@ -34,6 +34,29 @@ async function postForm() {
       alert(response.statusText);
     }
   }
+  
+  if (postType) {
+    const response = await fetch(`/api/users/${userId}/stats`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        user: userId,
+        title: postTitle,
+        type: postType,
+        description: postDescription,
+        time: postTime,
+        rating: postRating
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      console.log('Post Posted');
+    } else {
+      alert(response.statusText);
+    }
+  }
+  
   };
   
   export default function Planner({handlePageChange }) {

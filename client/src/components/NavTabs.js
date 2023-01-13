@@ -53,8 +53,12 @@ function NavTabs({ currentPage, handlePageChange }) {
                   Games
                 </button></Nav.Item></li>
                 <li><Nav.Item>
-                  <button className="link no-border" onClick={() => pageChange('Other', '#da4c88')}>
+                  <button className="link" onClick={() => pageChange('Other', '#da4c88')}>
                   Other
+                </button></Nav.Item></li>
+                <li><Nav.Item>
+                  <button className="link no-border" onClick={() => pageChange('Stats', '#1f1f1f')}>
+                  Stats
                 </button></Nav.Item></li>
                 <li><Nav.Item>
                   <button className="link" id="newPost" onClick={() => pageChange('PostCreate', '#1f1f1f')}>
