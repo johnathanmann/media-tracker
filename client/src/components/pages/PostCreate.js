@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Auth from "../../utils/auth";
 import "../../styles/create.css";
   
@@ -25,6 +25,22 @@ import "../../styles/create.css";
             description: postDescription,
             time: postTime,
             rating: postRating
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (response.ok) {
+          console.log('Post Posted');
+        } else {
+          alert(response.statusText);
+        }
+      }
+      if (postTitle) {
+        const response = await fetch(`api/users/${userId}`, {
+          method: 'PUT',
+          body: JSON.stringify({
+            userTime: postTime
           }),
           headers: {
             'Content-Type': 'application/json',
