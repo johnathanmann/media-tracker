@@ -3,7 +3,6 @@ import React from "react";
 import Auth from "../../utils/auth";
 import "../../styles/stats.css";
 import CanvasJSReact from '../../assets/canvasjs-3.7.4/canvasjs.react';
-var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const styles = {
@@ -112,8 +111,8 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    getPosts();
     getUser();
+    getPosts();
     getAlbums();
     getAnimes();
     getBooks();
@@ -122,7 +121,7 @@ export default function Dashboard() {
     getMovies();
     getOther();
     getShows();
-  });
+  },[]);
 
 		const options = {
 			animationEnabled: true,
@@ -138,23 +137,32 @@ export default function Dashboard() {
 				indexLabelFontSize: 16,
 				indexLabel: "{label} - {y}%",
 				dataPoints: [
-					{ y: `${((allAlbums.length / allPosts.length) * 100)}`, color: "#e5524e", label: "Albums" },
-					{ y: `${((allAnimes.length / allPosts.length) * 100)}`, color: "#ea8a58", label: "Anime" },
+					{ y: `${((allAlbums.length / allPosts.length) * 100)}`, color: "#e5524e", label: `Albums : ${allAlbums.length}` },
+					{ y: `${((allAnimes.length / allPosts.length) * 100)}`, color: "#ea8a58", label: `Anime : ${allAnimes.length}` },
           { y: `${((allBooks.length / allPosts.length) * 100)}`, color: "#eaab3f", label: "Books" },
-          { y: `${((allComics.length / allPosts.length) * 100)}`, color: "#8ab560", label: "Comics/Manga" },
-          { y: `${((allMovies.length / allPosts.length) * 100)}`, color: "#519f82", label: "Movies" },
-          { y: `${((allShows.length / allPosts.length) * 100)}`, color: "#427d9e", label: "Shows" },
-          { y: `${((allGames.length / allPosts.length) * 100)}`, color: "#b639ae", label: "Games" },
-          { y: `${((allOther.length / allPosts.length) * 100)}`, color: "#da4c88", label: "Other" },
+          { y: `${((allComics.length / allPosts.length) * 100)}`, color: "#8ab560", label: `Comics/Manga : ${allComics.length}` },
+          { y: `${((allMovies.length / allPosts.length) * 100)}`, color: "#519f82", label: `Movies : ${allMovies.length}` },
+          { y: `${((allShows.length / allPosts.length) * 100)}`, color: "#427d9e", label: `Shows : ${allShows.length}` },
+          { y: `${((allGames.length / allPosts.length) * 100)}`, color: "#b639ae", label: `Games : ${allGames.length}` },
+          { y: `${((allOther.length / allPosts.length) * 100)}`, color: "#da4c88", label: `Other : ${allOther.length}` },
 				]
 			}]
 	}
 
   return (
-    <div id="posts-container">
-    <div>
-    <CanvasJSChart options = {options} style={styles.canvas}/>
+    <div className="container" id="stats">
+    <div className="row text-center">
+      <div className="col-4">
+        <h1>Date <br/>Joined<br/> {singleUser.createdAt}</h1>
+      </div>
+      <div className="col-4">
+        <h1>Minutes <br/>Logged<br/> {singleUser.userTime}</h1>
+      </div>
+      <div className="col-4">
+        <h1>Posts <br/>Made<br/> {allPosts.length}</h1>
+      </div>
     </div>
+    <CanvasJSChart options = {options} style={styles.canvas}/>
     </div>
   );
 }

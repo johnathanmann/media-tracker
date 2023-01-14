@@ -24,9 +24,9 @@ export default function Post({thisPost}) {
 return (
       <div key={thisPost._id}>
       <h2>{thisPost.title}  <span className="rating">{thisPost.rating}/10</span></h2>
-      <p className="time">{thisPost.createdAt}</p>
-      <p className="time">Minutes Spent: {thisPost.time}</p>
-      <h6>{thisPost.description}</h6>
+      <p className="time postBody">{thisPost.createdAt}</p>
+      <p className="time postBody">Minutes Spent: {thisPost.time}</p>
+      <h6 className="postBody">{thisPost.description}</h6>
       <button className="delete" onClick={() => deletePost(postId)} >- Delete</button>
       </div>
 )

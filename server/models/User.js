@@ -27,7 +27,11 @@ const userSchema = new Schema({
   ],
   userTime: {
     type: Number,
-  }
+  },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    }
 });
 
 userSchema.pre("save", async function (next) {

@@ -72,7 +72,7 @@ import "../../styles/create.css";
               <option value="games">Games</option>
               <option value="other">Other</option>
             </select><br/>
-            <label htmlFor="quantity">Completin Time (in minutes):</label>
+            <label htmlFor="quantity">Completion Time (in minutes):</label>
             <input type="number" id="postTime" min="0"></input><br/>
               <label>Post Description:</label><br/>
             <textarea
