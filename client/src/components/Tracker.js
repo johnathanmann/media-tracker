@@ -65,7 +65,7 @@ export default function Tracker() {
   };
 
   useEffect(() => {
-    document.title = "Media Tracker";
+    document.title = "Media Query";
   }, []);
 
   const handlePageChange = (page) => setCurrentPage(page);

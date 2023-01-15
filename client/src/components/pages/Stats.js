@@ -37,7 +37,6 @@ export default function Dashboard() {
     setUserID(userInfo);
     const response = await fetch(`/api/users/${userID}`);
     const singleUser = await response.json();
-
     setSingleUser(singleUser)
   }
   async function getPosts() {
@@ -109,9 +108,10 @@ export default function Dashboard() {
     });
     setAllOther(wantedData);
   };
-
   useEffect(() => {
     getUser();
+  });
+  useEffect(() => {
     getPosts();
     getAlbums();
     getAnimes();
@@ -148,7 +148,6 @@ export default function Dashboard() {
 				]
 			}]
 	}
-
   return (
     <div className="container" id="stats">
     <div className="row text-center">
